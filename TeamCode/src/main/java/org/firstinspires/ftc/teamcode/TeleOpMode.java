@@ -10,7 +10,15 @@ import org.firstinspires.ftc.teamcode.subsystems.Drive;
 @TeleOp(name = "TeleOpMode", group = "Teleop")
 public class TeleOpMode extends LinearOpMode {
     public void runOpMode() {
-        DcMotor hook = hardwareMap.dcMotor.get("front_left_motor");
+        DcMotor hook = hardwareMap.dcMotor.get("hook");
+        
+        //added by ian
+        DcMotor left_intake = hardwareMap.dcMotor.get("left intake");
+        DcMotor right_intake = hardwareMap.dcMotor.get("right intake");
+        
+        
+        //until here - ian
+        
         telemetry.addData("Init","v:1.0");
         waitForStart();
         
