@@ -25,7 +25,7 @@ public class TeleOpMode extends LinearOpMode {
                 hook.setPower(0);
             }
             //Chassis test
-            double r = Math.hypot(gamepad1.left_stick_x, gamepad1.left_stick_y);
+            double r = Math.hypot(gamepad1.left_stick_x , gamepad1.left_stick_y) * 0.5 + 0.5 * gamepad1.right_trigger;
             double robotAngle = Math.atan2(gamepad1.left_stick_y, gamepad1.left_stick_x) - Math.PI / 4;
             double rightX = gamepad1.right_stick_x;
             final double v1 = r * Math.cos(robotAngle) + rightX;
